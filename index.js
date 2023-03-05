@@ -1,7 +1,9 @@
 import fetch from 'node-fetch';
 import { Client, Events, GatewayIntentBits } from 'discord.js';
+import dotenv from 'dotenv';
 import { config } from 'dotenv';
 
+// Load the environment variables from the .env file
 config();
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds,GatewayIntentBits.GuildMessages,GatewayIntentBits.MessageContent] });
